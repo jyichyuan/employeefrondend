@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    /* General Settings */
+    "target": "ES2022",                   // Target modern JavaScript (ES2022)
+    "lib": ["ES2023"],                    // Use ES2023 standard library
+    "module": "CommonJS",                 // Use CommonJS for Node.js compatibility
+    "moduleResolution": "Node",           // Node-style module resolution
+    "allowImportingTsExtensions": true,   // Allow imports with `.ts` extensions
+    "isolatedModules": true,              // Ensure each file is treated as its own module
+    "strict": true,                       // Enable strict type checking
+
+    /* Linting Options */
+    "noUnusedLocals": true,               // Error on unused local variables
+    "noUnusedParameters": true,           // Error on unused function parameters
+    "noFallthroughCasesInSwitch": true,   // Prevent fallthrough in switch cases
+
+    /* ts-node Specific */
+    "esModuleInterop": true,              // Enable compatibility with CommonJS/ESM modules
+    "resolveJsonModule": true,            // Allow importing JSON files
+    "noEmit": true                        // Prevent emitting output files
+  },
+  "include": ["src/**/*", "vite.config.ts"], // Include source files and Vite config
+  "exclude": ["node_modules", "dist"]        // Exclude node_modules and build output
+}

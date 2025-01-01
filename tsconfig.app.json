@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    /* General Settings */
+    "target": "ES2020",                   // Keep targeting ES2020 for compatibility
+    "useDefineForClassFields": true,      // Keep this for consistent field initialization behavior
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Support DOM APIs for React
+    "module": "commonjs",                 // Use CommonJS for Node.js compatibility with `ts-node`
+    "moduleResolution": "Node",           // Node-style module resolution
+    "skipLibCheck": true,                 // Skip type checking for libraries
+    "jsx": "react-jsx",                   // Keep JSX settings for React projects
+    "allowJs": true,
+
+    /* Node.js Compatibility */
+    "esModuleInterop": true,              // Ensure compatibility between ES Modules and CommonJS
+    "allowSyntheticDefaultImports": true, // Allow importing default exports for CommonJS modules
+    "resolveJsonModule": true,            // Allow importing JSON files
+
+    /* Bundler mode - optional for `ts-node` */
+    "isolatedModules": true,              // Required for bundler compatibility
+    "moduleDetection": "force",           // Force detection of modules
+    "allowImportingTsExtensions": true,   // Allow `.ts` file imports
+
+    /* Linting */
+    "strict": true,                       // Enable strict mode
+    "noUnusedLocals": true,               // Error on unused variables
+    "noUnusedParameters": true,           // Error on unused function parameters
+    "noFallthroughCasesInSwitch": true,   // Prevent fallthrough in switch statements
+
+    /* Output Settings */
+    "noEmit": true                        // Ensure no files are emitted
+  },
+  "include": ["src"],                     // Include all files in the `src` directory
+  "exclude": ["node_modules", "dist"]     // Exclude `node_modules` and output directory
+}
